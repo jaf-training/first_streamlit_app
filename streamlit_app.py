@@ -30,7 +30,7 @@ try:
   else:
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
     # normalize json response
-   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+    fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
     # display in df
     streamlit.dataframe(fruityvice_normalized)
 except URLError as e:
